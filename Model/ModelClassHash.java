@@ -3,10 +3,6 @@ package SeminarsOOP.Mvcstudentapp.Model;
 import SeminarsOOP.Mvcstudentapp.Controller.Interfaces.iGetModel;
 import SeminarsOOP.Mvcstudentapp.Model.Core.Student;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Map;
-
 /**
  * @author Developer name
  * @version 1.0

@@ -3,10 +3,6 @@ package SeminarsOOP.Mvcstudentapp.View;
 import SeminarsOOP.Mvcstudentapp.Controller.Interfaces.iGetView;
 import SeminarsOOP.Mvcstudentapp.Model.Core.Student;
 
-import java.util.List;
-import java.util.Scanner;
-
-
 public class ViewClass implements iGetView {
 
     public void printAllStudent(List<Student> students) {
