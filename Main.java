@@ -1,11 +1,16 @@
 package SeminarsOOP.Mvcstudentapp;
 
-import SeminarsOOP.Mvcstudentapp.Controller.ControllerClass;
-import SeminarsOOP.Mvcstudentapp.Controller.Interfaces.iGetModel;
-import SeminarsOOP.Mvcstudentapp.Controller.Interfaces.iGetView;
-import SeminarsOOP.Mvcstudentapp.Model.Core.Student;
-import SeminarsOOP.Mvcstudentapp.Model.ModelClassHash;
-import SeminarsOOP.Mvcstudentapp.View.ViewClassEng;
+import SeminarsOOP.Mvcstudentapp.controller.ControllerClass;
+import SeminarsOOP.Mvcstudentapp.controller.interfaces.IGetModel;
+import SeminarsOOP.Mvcstudentapp.controller.interfaces.IGetView;
+import SeminarsOOP.Mvcstudentapp.model.core.Student;
+import SeminarsOOP.Mvcstudentapp.model.ModelClassHash;
+import SeminarsOOP.Mvcstudentapp.view.ViewClassEng;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 /**
  * @author Developer name
@@ -51,12 +56,11 @@ public class Main {
 //        iGetModel modelList = fModel;//new ModelClassList(students);
 //        iGetView view = new ViewClass();
 
-        iGetModel modelList = new ModelClassHash(studMap);
-        iGetView view = new ViewClassEng();
+        IGetModel modelList = new ModelClassHash(studMap);
+        IGetView view = new ViewClassEng();
 
         ControllerClass controller = new ControllerClass(modelList, view);
 
-        //controller.update();
         controller.run();
 
 

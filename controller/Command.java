@@ -1,4 +1,4 @@
-package SeminarsOOP.Mvcstudentapp.Controller;
+package SeminarsOOP.Mvcstudentapp.controller;
 
 /**
  * * @apiNote нумератор конмад упраления контролера

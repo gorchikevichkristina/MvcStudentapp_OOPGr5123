@@ -1,14 +1,16 @@
-package SeminarsOOP.Mvcstudentapp.Model;
+package SeminarsOOP.Mvcstudentapp.model;
 
-import SeminarsOOP.Mvcstudentapp.Controller.Interfaces.iGetModel;
-import SeminarsOOP.Mvcstudentapp.Model.Core.Student;
+import SeminarsOOP.Mvcstudentapp.controller.interfaces.IGetModel;
+import SeminarsOOP.Mvcstudentapp.model.core.Student;
+
+import java.util.List;
 
 /**
  * @author Developer name
  * @version 1.0
  * @apiNote Класс для описания модул хранящего данные списком(List)
  */
-public class ModelClassList implements iGetModel {
+public class ModelClassList implements IGetModel {
 
     private List<Student> students;
 

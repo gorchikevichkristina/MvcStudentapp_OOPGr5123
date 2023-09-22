@@ -1,25 +1,25 @@
-package SeminarsOOP.Mvcstudentapp.View;
+package SeminarsOOP.Mvcstudentapp.view;
 
-import SeminarsOOP.Mvcstudentapp.Controller.Interfaces.iGetView;
-import SeminarsOOP.Mvcstudentapp.Model.Core.Student;
+import SeminarsOOP.Mvcstudentapp.controller.interfaces.IGetView;
+import SeminarsOOP.Mvcstudentapp.model.core.Student;
 
-public class ViewClassEng implements iGetView {
+import java.util.List;
+import java.util.Scanner;
+
+public class ViewClassEng implements IGetView {
+
+    /**
+     * вывод списка всех студентов
+     *
+     * @param students список студентов
+     */
+    @Override
     public void printAllStudent(List<Student> students) {
         System.out.println("----------- List of students -----------");
         for (Student s : students) {
             System.out.println(s);
         }
         System.out.println("----------------------------------------");
-    }
-
-    /**
-     * РІС‹РІРѕРґ СЃРїРёСЃРєР° РІСЃРµС… СЃС‚СѓРґРµРЅС‚РѕРІ
-     *
-     * @param students СЃРїРёСЃРѕРє СЃС‚СѓРґРµРЅС‚РѕРІ
-     */
-    @Override
-    public void printAllStudent(List<SeminarsOOP.StudentApp.Domen.Student> students) {
-
     }
 
     @Override

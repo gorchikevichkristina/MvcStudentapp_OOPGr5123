@@ -1,14 +1,18 @@
-package SeminarsOOP.Mvcstudentapp.Model;
+package SeminarsOOP.Mvcstudentapp.model;
 
-import SeminarsOOP.Mvcstudentapp.Controller.Interfaces.iGetModel;
-import SeminarsOOP.Mvcstudentapp.Model.Core.Student;
+import SeminarsOOP.Mvcstudentapp.controller.interfaces.IGetModel;
+import SeminarsOOP.Mvcstudentapp.model.core.Student;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Map;
 
 /**
  * @author Developer name
  * @version 1.0
  * @apiNote Класс для описания модуля хранящего данные в виде HashMap
  */
-public class ModelClassHash implements iGetModel {
+public class ModelClassHash implements IGetModel {
     private Map<Long, Student> studentMap;
 
     public ModelClassHash(Map<Long, Student> studMap) {
@@ -20,12 +24,7 @@ public class ModelClassHash implements iGetModel {
      * метод получкения списк студентов из HaspMap
      */
     public List<Student> getStudents() {
-        List<Student> stdList = new ArrayList<>();
-        for (Student std : studentMap.values()
-        ) {
-            stdList.add(std);
-        }
-        return stdList;
+        return new ArrayList<>(studentMap.values());
     }
 
     @Override
@@ -43,7 +42,7 @@ public class ModelClassHash implements iGetModel {
                 break;
             }
         }
-        if (flag == false) {
+        if (!flag) {
             System.out.println("Студент с таким id  не найден");
         }
     }

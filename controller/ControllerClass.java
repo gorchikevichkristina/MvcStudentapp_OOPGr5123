@@ -1,8 +1,9 @@
-package SeminarsOOP.Mvcstudentapp.Controller;
+package SeminarsOOP.Mvcstudentapp.controller;
 
-import SeminarsOOP.Mvcstudentapp.Controller.Interfaces.iGetModel;
-import SeminarsOOP.Mvcstudentapp.Controller.Interfaces.iGetView;
-import SeminarsOOP.StudentApp.Domen.Student;
+import SeminarsOOP.Mvcstudentapp.controller.interfaces.IGetModel;
+import SeminarsOOP.Mvcstudentapp.controller.interfaces.IGetView;
+import SeminarsOOP.Mvcstudentapp.model.core.Student;
+
 
 import java.io.FileNotFoundException;
 import java.util.ArrayList;
@@ -16,19 +17,19 @@ import java.util.Scanner;
  */
 public class ControllerClass {
 
-    private iGetModel model;
-    private iGetView view;
+    private IGetModel model;
+    private IGetView view;
     /**
      * список студентов
      */
-    private List<Student> students = new ArrayList<Student>();
+    private List<Student> students = new ArrayList<>();
 
     /**
      * @param model модуля данных
      * @param view  модуль отображения
      * @apiNote конструктор класса
      */
-    public ControllerClass(iGetModel model, iGetView view) {
+    public ControllerClass(IGetModel model, IGetView view) {
         this.model = model;
         this.view = view;
     }
@@ -50,8 +51,6 @@ public class ControllerClass {
      * метод обновления данных
      */
     public void update() {
-
-        //MVP
         students = model.getStudents();
 
         if (testData(students)) {
@@ -59,10 +58,6 @@ public class ControllerClass {
         } else {
             System.out.println("Список студентов пуст!");
         }
-
-
-        // MVC
-        //view.printAllStudent(model.getStudents());
     }
 
 
@@ -70,7 +65,7 @@ public class ControllerClass {
      * метод управления контролером через команды с консоли
      */
     public void run() throws FileNotFoundException {
-        Command com = Command.NONE;
+        Command com;
         boolean getNewIter = true;
         while (getNewIter) {
             String command = view.prompt("Введите команду:");

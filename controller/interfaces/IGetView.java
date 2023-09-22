@@ -1,6 +1,6 @@
-package SeminarsOOP.Mvcstudentapp.Controller.Interfaces;
+package SeminarsOOP.Mvcstudentapp.controller.interfaces;
 
-import SeminarsOOP.StudentApp.Domen.Student;
+import SeminarsOOP.Mvcstudentapp.model.core.Student;
 
 import java.util.List;
 
@@ -9,7 +9,7 @@ import java.util.List;
  * @version 1.0
  * @apiNote интерфейс для взаимодейсвтия с модулем отображения
  */
-public interface iGetView {
+public interface IGetView {
     /**
      * вывод списка всех студентов
      *

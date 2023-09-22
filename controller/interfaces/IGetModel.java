@@ -1,6 +1,6 @@
-package SeminarsOOP.Mvcstudentapp.Controller.Interfaces;
+package SeminarsOOP.Mvcstudentapp.controller.interfaces;
 
-import SeminarsOOP.Mvcstudentapp.Model.Core.Student;
+import SeminarsOOP.Mvcstudentapp.model.core.Student;
 
 import java.io.FileNotFoundException;
 import java.util.List;
@@ -10,7 +10,7 @@ import java.util.List;
  * @version 1.0
  * @apiNote интерфейс для взаимодейсвтия с модулем данных
  */
-public interface iGetModel {
+public interface IGetModel {
     /**
      * метод получения списка студентов
      *

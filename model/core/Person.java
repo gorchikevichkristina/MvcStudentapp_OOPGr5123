@@ -1,4 +1,4 @@
-package SeminarsOOP.Mvcstudentapp.Model.Core;
+package SeminarsOOP.Mvcstudentapp.model.core;
 
 /**
  * @author Developer name
